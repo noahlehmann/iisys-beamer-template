@@ -1,0 +1,52 @@
+%beamerinnerthemetexsx.sty
+\mode<presentation>
+
+\RequirePackage{tabularx}
+\RequirePackage{graphicx}
+
+
+% Frame title
+\defbeamertemplate*{frametitle}{iisysb}[1][]{
+    \setlength{\unitlength}{1cm}
+    \begin{picture}(25.40,2.7)(0,13.18)
+        % logos
+        \put(1.16,14.25){\includegraphics[width=1.75cm]{images/theme/iisys-topleft}}
+        \put(23.93,14.86){\includegraphics[width=0.56cm]{images/theme/iisys-logo-notext}}
+        % titles
+        \put(3.70,14.4){\large \textbf{\insertframetitle}}
+        \put(3.70,13.5){\normalsize \insertframesubtitle}
+        % chapter
+        \put(18.2,14.75){
+            \begin{minipage}{5cm}
+                \begin{flushright}
+                    \tiny Kapitel eins zwei drei
+                \end{flushright}
+            \end{minipage}
+        }
+    \end{picture}
+}
+
+\setbeamertemplate{footline}{
+    \ifnum \theframenumber=1
+    % This is the title frame, do nothing
+    \else
+        \setlength{\unitlength}{1cm}
+        \begin{picture}(25.40,2)(0,0)
+            % logo
+            \put(24.12,0.56){\includegraphics[width=1.13cm]{images/theme/iisys-bottomright}}
+            %author
+            \put(1.80,0.59){\tiny \insertauthor, \insertinstitute}
+            % zeile
+            \put(23.2,0.62){
+                \begin{minipage}{1cm}
+                    \begin{flushright}
+                        \tiny \insertpagenumber
+                    \end{flushright}
+                \end{minipage}
+            }
+        \end{picture}
+    \fi
+
+}
+
+\mode<all>

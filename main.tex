@@ -1,18 +1,28 @@
-%! Author = nlehmann
-%! Date = 12.09.23
+\documentclass[12pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\usepackage[orientation=landscape,size=custom,width=25.40,height=15.88,scale=0.5]{beamerposter}
 
-% Preamble
-\documentclass[11pt]{article}
+\renewcommand{\familydefault}{\sfdefault}
+\usetheme{iisysb}
 
-% Packages
-\usepackage{amsmath}
+\title{Iisys LaTex Beamer}
+\subtitle{Basic Template}
+\author{Noah Lehmann}
+\institute{FG Intelligente \& Lernende Systeme}
 
-% Document
+
 \begin{document}
 
+    \begin{frame}
+        \titlepage
+    \end{frame}
 
 
-    \bibliography{main}
-    \bibliographystyle{plain}
+    \begin{frame}
+        \frametitle{There Is No Largest Prime Number}
+        \framesubtitle{The proof uses \textit{reductio ad absurdum}.}
+
+    \end{frame}
 
 \end{document}
