@@ -1,6 +1,29 @@
-# Font Sizes
+# Iisys Tex Beamer Template
 
-Mit 12pt sind die Fondgrößen folgende:
+This is a LaTeX beamer template for the Iisys group at the University of Applied Sciences in Hof.
+
+## Build the document
+
+You can simply build the document with the provided Containerfile. 
+Assuming you have [docker](https://docs.docker.com/get-started/get-docker/) installed already, just run the following command:
+
+```bash
+docker build --output type=local,dest=. --target pdf -f build/Containerfile .
+```
+
+The build process will take a while on first run as it needs to download the texlive distribution.
+The resulting pdf will overwrite the `main.pdf` in the project base directory.
+
+For convenience and easy automation in your IDE, the `run.sh` script is provided. 
+It currently expects no arguments. 
+
+```bash
+./run.sh
+```
+
+## Font Sizes
+
+With 12pt the fontsizes translate to the following sizes:
 
 | command       | size  | 
 |---------------|-------|
